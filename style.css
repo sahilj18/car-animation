@@ -34,6 +34,32 @@ main{
     width: 100%;
     position: absolute;
 }
-.car{
-    
+.ck{
+    font-size:5rem;
+    position:absolute;
 }
+ .truck{
+    top: -10%;
+    animation-name: drive;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+ }
+
+ .car{
+    top: 40%;
+    animation-name: drive;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-timing-function: cubic-bezier(0.81, -0.32, 0, 1);
+    
+ }
+
+ @keyframes drive {
+    from {
+      transform: translateX(-2vw) scale(-1, 1);
+    }
+    to {
+      transform: translateX(102vw) scale(-1, 1);
+    }
